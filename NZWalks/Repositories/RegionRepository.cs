@@ -4,7 +4,7 @@ using NZWalks.Models.Domain;
 
 namespace NZWalks.Repositories
 {
-    // test commites
+    // test commites test master
     public class RegionRepository : IRegionRepository
     {
         private readonly NZWalksDBContext _dBContext;
