@@ -1,10 +1,11 @@
 ﻿using NZWalks.Models.Domain;
+using NZWalks.Models.DTOs;
 
 namespace NZWalks.Repositories
 {
     public interface IRegionRepository
     {
-        Task<List<Region>> GetAllRegionAsync();
+        Task<List<Region>> GetAllRegionAsync(RegionSearchRequest regionSearchRequest);
         Task<Region?> GetRegionByIdAsysnc(Guid Id);
         Task<Region> AddRegionAsync(Region region);
 

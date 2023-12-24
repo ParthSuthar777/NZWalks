@@ -33,11 +33,13 @@ namespace NZWalks.Controllers
 
         //GET all regions
         //GET : https//localhost:123/api/regions
-        [HttpGet]
-        public async Task<IActionResult> GetAllRegions()
+      
+        [HttpPost]
+        [Route("GetAllRegion")]
+        public async Task<IActionResult> GetAllRegions([FromBody]RegionSearchRequest regionSearchRequest)
         {
             //Get Data from Database - DOmain Models
-            var regions = await _regionRepository.GetAllRegionAsync();
+            var regions = await _regionRepository.GetAllRegionAsync(regionSearchRequest);
             //Map Domain models to DTOs
 
             //var regionDto = new List<RegionDto>();
